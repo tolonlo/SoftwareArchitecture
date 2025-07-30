@@ -21,3 +21,16 @@ class AboutPageView(TemplateView):
             "author": "Developed by: Your Name",
         })
         return context
+class ContactPageView(TemplateView):
+    template_name = 'pages/contact.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context.update({
+            "title": "Contact - Online Store",
+            "subtitle": "Contact us",
+            "description": "Feel free to reach out through this page.",
+            "author": "Developed by: Your Name",
+        })
+        return context
+
